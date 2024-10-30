@@ -1,0 +1,229 @@
+
+.signin-container {
+    background: linear-gradient(to top, #70f1e1, #202c4d);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  h2 {
+    margin: -35px;
+    color: rgb(5, 5, 107);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background-color: #70f1e1;
+    position: relative;
+    z-index: 2;
+  }
+
+  .signin-card {
+    background: #202c4d;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    /* box-shadow: 0px 40px 0px rgba(0, 0, 0, 0.2); */
+  }
+  
+  .signin-card::before {
+    content: '';
+    position: absolute;
+    bottom: -50px; /* Adjust to control shadow's position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 10px;
+    background: radial-gradient(rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.1));
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    border-radius: 50%;
+    filter: blur(5px);
+    z-index: 1;
+  }
+
+  .remember{
+    color: #70f1e1;
+  }
+
+  
+  .remember input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #70f1e1; /* Border color */
+    border-radius: 2px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Unchecked state background */
+  .remember input[type="checkbox"] {
+    background-color: #202c4d; /* Unchecked background color */
+}
+  
+  /* Checked state */
+  .remember input[type="checkbox"]:checked {
+    background-color: #202c4d; /* Custom color for checked state */
+    border-color: #70f1e1;
+  }
+  
+  /* Add a checkmark symbol */
+  .remember input[type="checkbox"]:checked::after {
+    content: "✓";
+    font-size: 10px;
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 11px;
+  }
+
+  .forgot a{
+    text-decoration: none;
+    color: #70f1e1;
+  }
+ 
+
+
+  .wave-container {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top:0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  /* Basic wave styling */
+  .wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 0.5;
+    animation: randomMove 15s linear infinite, waveVerticalMove 30s ease-in-out infinite;
+
+  }
+
+  .wave1 {
+    background-color: rgba(3, 169, 244, 0.6);
+    height: 150px; /* Longest wave */
+    animation-delay: 5s;
+    bottom: 0px;
+  }
+  .wave2 {
+    background-color: rgba(0, 188, 212, 0.6);
+    height: 120px; /* Shorter wave */
+    animation-delay: 2s;
+    bottom: 0px;
+  }
+  .wave3 {
+    background-color: rgba(0, 150, 136, 0.6);
+    height: 90px; /* Smallest wave */
+    animation-delay: 3s;
+    bottom: 0px;
+  }
+
+  @keyframes randomMove {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(30px); }
+    50% { transform: translateX(-30px); }
+    75% { transform: translateX(30px); }
+    100% { transform: translateX(0); }
+  }
+
+  /* Wave vertical up and down movement */
+  @keyframes waveVerticalMove {
+    0% { transform: translateY(20px); }
+    12.5% { transform: translateY(80px); }
+    25% { transform: translateY(50px); }
+    37.5% { transform: translateY(60px); }
+    50% { transform: translateY(50px); }
+    62.5% { transform: translateY(80px); }
+    75% { transform: translateY(50px); }
+    87.5% { transform: translateY(60px); }
+    100% { transform: translateY(20px); }
+  }
+
+
+
+
+  /* Wave effect */
+  /* src/Login.css */
+
+
+  
+  /* .login-box {
+    width: 320px;
+    background-color: #1a1a2e;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+  
+  .login-header {
+    background-color: #00e6e6;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .avatar i {
+    color: #00e6e6;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 18px;
+  }
+  
+  .input-field {
+    background-color: #333;
+    color: #fff;
+    padding-left: 40px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 230, 230, 0.5);
+  }
+  
+  .text-info {
+    color: #00e6e6;
+    text-decoration: none;
+  }
+  
+  .text-info:hover {
+    color: #00cccc;
+  }
+  
+  .login-btn {
+    background-color: #00e6e6;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #00cccc;
+  }
+  
+  .small {
+    font-size: 12px;
+  }
+   */
